@@ -1,3 +1,6 @@
+// KP: this is where we can replace with AI-generated sounds for each of the sounds that play when the player interacts with a game element.
+// KP: for example the var coin is the one that we hear when user jumps to hit a coin blob.
+
 function GameSound() {
   var coin;
   var powerUpAppear;
@@ -11,6 +14,7 @@ function GameSound() {
 
   var that = this;
 
+  // KP: we can just replace coin.wav from AI generated music model
   this.init = function() {
     coin = new Audio('sounds/coin.wav');
     powerUpAppear = new Audio('sounds/power-up-appear.wav');
@@ -23,6 +27,7 @@ function GameSound() {
     jump = new Audio('sounds/jump.wav');
   };
 
+  // KP: we don't need to change this as this is just playing logic, unless we want to get creative with the playspeed or something like that later
   this.play = function(element) {
     if (element == 'coin') {
       coin.pause();
