@@ -1,4 +1,5 @@
 //canvas elements for the main mario game
+// KP: this is generating the home screen that we see on the screen
 
 var GameUI = (function() {
   var instance;
@@ -55,6 +56,7 @@ var GameUI = (function() {
       ctx.fill();
     };
 
+    // KP: this is generating the text that we see on the UI - font, fill color for the font
     this.writeText = function(text, x, y) {
       ctx.font = '20px SuperMario256';
       ctx.fillStyle = 'white';
