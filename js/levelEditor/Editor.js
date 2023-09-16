@@ -48,6 +48,7 @@ function Editor() {
     view.append(viewPort, leftArrow);
     view.append(viewPort, gameWorld);
 
+    // KP: this is adding the listeners for the right & left scrolls for extending the viewport to the left & right
     rightArrow.addEventListener('click', that.rightScroll);
     leftArrow.addEventListener('click', that.leftScroll);
   };
@@ -114,6 +115,8 @@ function Editor() {
     view.addClass(elementWrapper, 'element-wrapper');
     view.append(mainWrapper, elementWrapper);
 
+
+    // KP: these are the different elements that can be changed by Gen AI. For example for POC, we can change the image of Goomba 
     var elements = [
       'cell',
       'platform',
